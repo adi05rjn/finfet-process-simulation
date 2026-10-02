@@ -1,0 +1,27 @@
+
+<SceneGraph ColorMode="Material">
+
+  <DocumentProperties>
+    <ModelProperties IsComplete="false" ModelResolution="1.0" ModelUnits="nm"/>
+    <Version App="SEMulator3D" AppVersion="13.1.0.0" Number="2.2.12.0"/>
+    <LayoutFile Filename="E:/Downloads/Day 3/FinFET/FinFET.cat" TopCell="sti"/>
+    <ProcessFile Filename="E:/Downloads/Day 3/FinFET/FinFET.vproc"/>
+    <Zones Number="1"/>
+    <Output Directory="FinFET-Output" Enabled="true" ExtractFragments="false"/>
+    <ManagerProperties CropOption="false" LayerMapFileName="" RunType="Start From Blank" StartViewer="true"/>
+    <ModelArea BoundingMask="" Coordinates="0.0 0.0 0.0 0.0" PadBy="0.0" Type="Active Masks"/>
+    <UserProperties Author="Laptop" AutoRev="true" Comments="" CreatedOn="Friday October 02, 2026 22:17:38" LastModified="Friday October 02, 2026 22:17:38" Revision="4" Watermark=""/>
+    <SecurityProperties FileAccessRestriction=""/>
+  </DocumentProperties>
+
+  <material blue="50" green="50" name="default" red="50" visibility="true"/>
+
+  <Dopants/>
+
+  <Views/>
+
+  <Lights/>
+
+  <Analyses Comments="" Name="" Transparency="0.0" Visibility="true"/>
+
+</SceneGraph>

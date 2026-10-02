@@ -1,0 +1,7 @@
+pplus                       5     0  
+wafer                       0     0  
+n_well                      2     0  
+sti_trench                  1     0  
+gate_nmos_pmos              6     0  
+nplus                       4     0  
+fin                         3     0  
