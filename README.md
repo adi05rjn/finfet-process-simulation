@@ -26,8 +26,7 @@ This repository contains the complete project files for a 3D FinFET fabrication-
 │   ├── FinFET-original.gds            # Original GDSII copy
 │   ├── FinFET-layermap.txt            # Layer-map definition
 │   ├── FinFET-layermap-original.txt   # Original layer map
-│   ├── FinFET.zam                     # Input assembly
-│   └── SEMulator3DMaterialsDatabase13.vmpd
+│   └── FinFET.zam                     # Input assembly
 └── FinFET-Output/
     ├── FinFET.log                     # Full build log
     └── Default Zone/                  # Intermediate/output wafer states
@@ -36,9 +35,10 @@ This repository contains the complete project files for a 3D FinFET fabrication-
 ## Reproducing the build
 
 1. Install **Coventor SEMulator3D 13.1** (or a compatible version) and ensure that the required license is available.
-2. Open `FinFET.zam` and load `FinFET-Input/FinFET.vproc` with the corresponding `FinFET.gds` and layer map.
-3. Check file paths before running. `__semu_FinFET.py` was auto-generated on Windows and contains absolute paths from the original machine; update these paths for your system if you use the script directly.
-4. Execute the process flow and compare the run with `FinFET-Output/FinFET.log`.
+2. Provide the materials database `SEMulator3DMaterialsDatabase13.vmpd` from your own SEMulator3D installation. It is not included in this repository (see the note below). The process file expects it at `./apps/SEMulator3DMaterialsDatabase13.vmpd`, so place it there or point SEMulator3D to your copy.
+3. Open `FinFET.zam` and load `FinFET-Input/FinFET.vproc` with the corresponding `FinFET.gds` and layer map.
+4. Check file paths before running. `__semu_FinFET.py` was auto-generated on Windows and contains absolute paths from the original machine; update these paths for your system if you use the script directly.
+5. Execute the process flow and compare the run with `FinFET-Output/FinFET.log`.
 
 The recorded build completed successfully in approximately **82 seconds** on the original machine.
 
@@ -46,9 +46,9 @@ The recorded build completed successfully in approximately **82 seconds** on the
 
 The run log reports that some **1.5 nm** growth/deposition features are below two voxels at the chosen **1 nm** model resolution. SEMulator3D warns that such layers can become visually under-resolved and may affect later modeling operations. This is an important resolution limitation to account for when extending or calibrating the flow.
 
-## Files and redistribution note
+## Files not included
 
-`SEMulator3DMaterialsDatabase13.vmpd` appears to be a vendor-provided SEMulator3D materials database bundled with the exported project. **Before making this repository public, verify that your SEMulator3D/Coventor license permits redistribution of that file.** If redistribution is not permitted, remove it from the public repository and document it as a prerequisite instead.
+`SEMulator3DMaterialsDatabase13.vmpd` is a vendor-provided SEMulator3D materials database. It was removed from this repository because redistribution of vendor files may not be permitted by the SEMulator3D/Coventor license. It is a prerequisite: use the copy that ships with your own SEMulator3D installation (see "Reproducing the build"). Earlier commits in the repository history may still contain it.
 
 ## Portfolio summary
 
